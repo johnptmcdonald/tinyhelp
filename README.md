@@ -1,4 +1,10 @@
 # tinyhelp
 
-![Travis build](https://img.shields.io/travis/johnptmcdonald/microlib)
-![Code Coverage](https://img.shields.io/codecov/c/github/johnptmcdonald/microlib)
+![Travis build](https://img.shields.io/travis/johnptmcdonald/tinyhelp)
+![Code Coverage](https://img.shields.io/codecov/c/github/johnptmcdonald/tinyhelp)
+
+This is a tiny library of javascript functions, currently comprsing:
+*deepCopy
+*flatten
+*peek
+*sort (in progress)
