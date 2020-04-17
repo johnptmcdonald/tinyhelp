@@ -9,3 +9,4 @@ This is a tiny library of javascript functions, currently comprsing:
 - flatten
 - peek
 - sort (in progress)
+- isEqual (in progress)
