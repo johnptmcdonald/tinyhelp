@@ -4,7 +4,8 @@
 ![Code Coverage](https://img.shields.io/codecov/c/github/johnptmcdonald/tinyhelp)
 
 This is a tiny library of javascript functions, currently comprsing:
-*deepCopy
-*flatten
-*peek
-*sort (in progress)
+
+- deepCopy
+- flatten
+- peek
+- sort (in progress)
