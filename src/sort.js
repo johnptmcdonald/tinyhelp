@@ -8,4 +8,5 @@ const sort = array => {
   const copiedArray = array.slice()
   return copiedArray.sort((a,b) => a-b)
 }
+
 module.exports = sort;
