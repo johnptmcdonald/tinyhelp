@@ -3,20 +3,15 @@
 // elements in array are all numbers
 
 // post conditions:
-// will sort array in order provided (defaults to asc)
-// 1 denotes ascending
-// -1 denotes descending
-// 0 denotes randomize the order
-// any other value will be ignored
+// will sort array in ascending or descending order (defaults to asc)
 // returns sorted array without mutating original
 
-const sort = (array, order = 1) => {
+const sort = (array, asc = true) => {
   if (array.length <= 1) return array;
   let copy = [...array];
 
-  if (order === 1) {
-  } else if (order === -1) {
-  } else if (order === 0) {
+  if (asc) {
+  } else {
   }
 };
 
@@ -29,18 +24,30 @@ const split = array => {
   return [firstHalf, secondHalf];
 };
 
-const merge = (arrayA, arrayB) => {
+const merge = (arrayA, arrayB, asc = true) => {
   let idxA = 0;
   let idxB = 0;
+  const copyA = asc ? [...arrayA] : reverse(arrayA);
+  const copyB = asc ? [...arrayB] : reverse(arrayB);
   const mergedArray = [];
 
-  while (idxA < arrayA.length || idxB < arrayB.length) {
-    if (arrayA[idxA] < arrayB[idxB]) {
-      mergedArray.push(arrayA[idxA]);
-      idxA++;
+  while (idxA < copyA.length || idxB < copyB.length) {
+    if (copyA[idxA] < copyB[idxB]) {
+      if (asc) {
+        mergedArray.push(copyA[idxA]);
+        idxA++;
+      } else {
+        mergedArray.push(copyB[idxB]);
+        idxB++;
+      }
     } else {
-      mergedArray.push(arrayB[idxB]);
-      idxB++;
+      if (asc) {
+        mergedArray.push(copyB[idxB]);
+        idxB++;
+      } else {
+        mergedArray.push(copyA[idxA]);
+        idxA++;
+      }
     }
   }
 
