@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const sort = require("../sort");
+const sort = require("../").sort;
 
 describe("sort", () => {
   it("sorts numbers in ascending order", () => {

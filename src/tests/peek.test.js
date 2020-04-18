@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const peek = require("../peek");
+const peek = require("../").peek;
 
 describe("peek", () => {
   it("returns the last item of an array", () => {
