@@ -6,7 +6,7 @@
  * @return {Integer} - A random integer
  */
 
-const randomNumber = (min, max) => {
+const randomInteger = (min, max) => {
   let innerMin = min;
   let innerMax = max;
   if (innerMin > innerMax) {
@@ -17,4 +17,4 @@ const randomNumber = (min, max) => {
   return Math.floor(Math.random() * (innerMax - innerMin + 1) + innerMin);
 };
 
-module.exports = randomNumber;
+module.exports = randomInteger;
