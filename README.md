@@ -7,6 +7,8 @@ This is a tiny library of javascript functions, currently comprising:
 
 - deepCopy
 - flatten
+- isPrime
+- sieveOfE (sieve of Eratosthenes)
 - peek
-- sort (in progress)
+- sort
 - isEqual (in progress)
