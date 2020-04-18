@@ -5,3 +5,4 @@ export { default as peek } from "./peek.js";
 export { default as sieveOfE } from "./sieveOfE.js";
 export { default as sort } from "./sort.js";
 export { default as camelCase } from "./camelCase.js";
+export { default as randomInteger } from "./randomInteger.js";
