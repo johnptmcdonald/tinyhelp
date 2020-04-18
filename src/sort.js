@@ -46,3 +46,17 @@ const merge = (arrayA, arrayB) => {
 
   return mergedArray;
 };
+
+const reverse = array => {
+  const copy = [...array];
+  let leftIdx = 0;
+  let rightIdx = copy.length - 1;
+
+  while (leftIdx < rightIdx) {
+    [copy[leftIdx], copy[rightIdx]] = [copy[rightIdx], copy[leftIdx]];
+    leftIdx++;
+    rightIdx--;
+  }
+
+  return copy;
+};
