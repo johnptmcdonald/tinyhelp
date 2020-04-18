@@ -28,3 +28,21 @@ const split = array => {
 
   return [firstHalf, secondHalf];
 };
+
+const merge = (arrayA, arrayB) => {
+  let idxA = 0;
+  let idxB = 0;
+  const mergedArray = [];
+
+  while (idxA < arrayA.length || idxB < arrayB.length) {
+    if (arrayA[idxA] < arrayB[idxB]) {
+      mergedArray.push(arrayA[idxA]);
+      idxA++;
+    } else {
+      mergedArray.push(arrayB[idxB]);
+      idxB++;
+    }
+  }
+
+  return mergedArray;
+};
