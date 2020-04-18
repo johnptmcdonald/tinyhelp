@@ -1,1 +1,11 @@
+// pre conditions:
+// array is defined
+// elements in array are all numbers
 
+// post conditions:
+// will sort array in order provided (defaults to asc)
+// 1 denotes ascending
+// -1 denotes descending
+// 0 denotes randomize the order
+// any other value will be ignored
+// returns sorted array without mutating original
