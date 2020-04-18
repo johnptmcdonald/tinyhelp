@@ -27,6 +27,7 @@ const split = array => {
 const merge = (arrayA, arrayB, asc = true) => {
   let idxA = 0;
   let idxB = 0;
+  // copy the arrays as is if asc is true, if not reverse the order
   const copyA = asc ? [...arrayA] : reverse(arrayA);
   const copyB = asc ? [...arrayB] : reverse(arrayB);
   const mergedArray = [];
@@ -49,6 +50,16 @@ const merge = (arrayA, arrayB, asc = true) => {
         idxA++;
       }
     }
+
+    // if all elements in one of the arrays have been merged,
+    // copy all the elements left over from the other array since already sorted
+    if (idxA === copyA.length) {
+      mergedArray.push(...copyB.slice(idxB));
+      return mergedArray;
+    } else if (idxB === copyB.length) {
+      mergedArray.push(...copyA.slice(idxA));
+      return mergedArray;
+    }
   }
 
   return mergedArray;
@@ -60,6 +71,7 @@ const reverse = array => {
   let rightIdx = copy.length - 1;
 
   while (leftIdx < rightIdx) {
+    // swap element on left with element on right
     [copy[leftIdx], copy[rightIdx]] = [copy[rightIdx], copy[leftIdx]];
     leftIdx++;
     rightIdx--;
