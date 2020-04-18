@@ -19,3 +19,12 @@ const sort = (array, order = 1) => {
   } else if (order === 0) {
   }
 };
+
+const split = array => {
+  const [firstHalf, secondHalf] = [
+    array.slice(0, Math.floor(array.length / 2)),
+    array.slice(Math.floor(array.length / 2), array.length),
+  ];
+
+  return [firstHalf, secondHalf];
+};
