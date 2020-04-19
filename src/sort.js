@@ -78,3 +78,5 @@ const reverse = array => {
 
   return copy;
 };
+
+module.exports = sort;
