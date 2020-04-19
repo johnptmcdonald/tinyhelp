@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const isEqual = require('../isEqual');
+const isEqual = require('../').isEqual;
 
 describe('isEqual', () => {
   it('compares two objects and returns true if they have identical keys and values', () => {

@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const deepCopy = require("../deepCopy");
+const deepCopy = require("../").deepCopy;
 
 describe("deepCopy", () => {
   it("returns a deep copy of an array", () => {
