@@ -31,3 +31,5 @@ This is a tiny library of javascript functions, currently comprising:
 - peek
 - sort
 - isEqual (in progress)
+- inPlaceShuffle
+- regularShuffle
