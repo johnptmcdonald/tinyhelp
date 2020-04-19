@@ -24,6 +24,35 @@ describe('sort', () => {
     expect(sortedArr2).to.deep.equal([67, 56, 1, 1, 0, -90, -100]);
     expect(sortedArr3).to.deep.equal([49, 24, 7, 3, -12, -45]);
   });
+  it('handles an array of strings', () => {
+    const myArr = [
+      'apples',
+      'oranges',
+      'fullstack',
+      'cody',
+      'javascript',
+      'armageddon',
+    ];
+    const myArr2 = ['react', 'redux', 'zebra', 'axios', 'xian', 'express'];
+    const sortedArr = sort(myArr);
+    const sortedArr2 = sort(myArr2, false);
+    expect(sortedArr).to.deep.equal([
+      'apples',
+      'armageddon',
+      'cody',
+      'fullstack',
+      'javascript',
+      'oranges',
+    ]);
+    expect(sortedArr2).to.deep.equal([
+      'zebra',
+      'xian',
+      'redux',
+      'react',
+      'express',
+      'axios',
+    ]);
+  });
   it('does not mutate the array', () => {
     const myArr = [6, 4, 5, 2, 3, 1];
     const sortedArr = sort(myArr);

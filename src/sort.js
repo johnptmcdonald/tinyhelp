@@ -1,6 +1,6 @@
 /* pre conditions:
 - array is defined
-- elements in array are all numbers
+- elements in array are all numbers or all strings
 
 post conditions:
 - will sort array in ascending or descending order (defaults to asc)
