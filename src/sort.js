@@ -6,6 +6,16 @@
 // will sort array in ascending or descending order (defaults to asc)
 // returns sorted array without mutating original
 
+/**
+ * A function to sort numbers in an array in ascending order
+ * @param array - an array
+ * @return - a new sorted array
+ */
+// const sort = array => {
+//   const copiedArray = array.slice();
+//   return copiedArray.sort((a, b) => a - b);
+// };
+
 const sort = (array, asc = true) => {
   if (array.length <= 1) return array;
   const [firstHalf, secondHalf] = split(array);

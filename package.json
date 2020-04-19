@@ -30,9 +30,7 @@
     "url": "https://github.com/johnptmcdonald/tinyhelp/issues"
   },
   "homepage": "https://github.com/johnptmcdonald/tinyhelp#readme",
-  "dependencies": {
-    "unique-random-array": "2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
