@@ -1,20 +1,18 @@
-// pre conditions:
-// array is defined
-// elements in array are all numbers
+/* pre conditions:
+- array is defined
+- elements in array are all numbers
 
-// post conditions:
-// will sort array in ascending or descending order (defaults to asc)
-// returns sorted array without mutating original
+post conditions:
+- will sort array in ascending or descending order (defaults to asc)
+- returns sorted array without mutating original
+*/
 
 /**
  * A function to sort numbers in an array in ascending order
  * @param array - an array
- * @return - a new sorted array
+ * @param asc - boolean
+ * @return - a new sorted array in ascending or descending order
  */
-// const sort = array => {
-//   const copiedArray = array.slice();
-//   return copiedArray.sort((a, b) => a - b);
-// };
 
 const sort = (array, asc = true) => {
   if (array.length <= 1) return array;
