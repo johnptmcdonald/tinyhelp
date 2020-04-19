@@ -8,11 +8,10 @@
 
 const sort = (array, asc = true) => {
   if (array.length <= 1) return array;
-  let copy = [...array];
-
-  if (asc) {
-  } else {
-  }
+  const [firstHalf, secondHalf] = split(array);
+  return asc
+    ? merge(sort(firstHalf), sort(secondHalf))
+    : merge(sort(firstHalf), sort(secondHalf), false);
 };
 
 const split = array => {
