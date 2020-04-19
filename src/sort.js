@@ -27,7 +27,7 @@ const split = array => {
 const merge = (arrayA, arrayB, asc = true) => {
   let idxA = 0;
   let idxB = 0;
-  // copy the arrays as is if asc is true, if not reverse the order
+  // copy the array as is if asc is true, if not reverse the order
   const copyA = asc ? [...arrayA] : reverse(arrayA);
   const copyB = asc ? [...arrayB] : reverse(arrayB);
   const mergedArray = [];
