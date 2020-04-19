@@ -30,4 +30,4 @@ This is a tiny library of javascript functions, currently comprising:
 - sieveOfE (sieve of Eratosthenes)
 - peek
 - sort
-- isEqual (in progress)
+- isEqual
