@@ -33,4 +33,5 @@ This is a tiny library of javascript functions, currently comprising:
 - isEqual
 - inPlaceShuffle
 - regularShuffle
+- checkNested
 
