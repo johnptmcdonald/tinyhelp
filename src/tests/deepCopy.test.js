@@ -18,4 +18,11 @@ describe("deepCopy", () => {
     expect(newObj.name.first).to.equal("Alpha");
     expect(myObj.name.first).to.equal("Bravo");
   });
+  it("can copy an object that has arrays as values", () => {
+    const myObj = {
+      a: [1],
+      }
+    const newObj = deepCopy(myObj);
+    expect(newObj.a).to.deep.equal(myObj.a);
+  });
 });

@@ -5,7 +5,7 @@
  * @return {(Object | Array)} - The new, cloned object or array
  */
 const deepCopy = (o) => {
-  return JSON.parse(JSON.stringify(o));
+    return JSON.parse(JSON.stringify(o));
 };
 
 module.exports = deepCopy;
