@@ -18,4 +18,31 @@ describe("deepCopy", () => {
     expect(newObj.name.first).to.equal("Alpha");
     expect(myObj.name.first).to.equal("Bravo");
   });
+  it("can copy an object that has arrays as values", () => {
+    const myObj = {
+      a: [1],
+      }
+    const newObj = deepCopy(myObj);
+    expect(newObj.a).to.deep.equal(myObj.a);
+  });
+  it("can copy an object that has undefined, NaN, Infinity as values", () => {
+    const myObj = {
+      a: [1],
+      b: new Date(),
+      c: undefined,
+      d: Infinity,
+      e: NaN,
+      f: false,
+      }
+    const newObj = deepCopy(myObj);
+    expect(newObj.a).to.deep.equal(myObj.a);
+    expect(newObj.b).to.deep.equal(myObj.b);
+    expect(newObj.c).to.equal(myObj.c);
+    expect(newObj.d).to.equal(myObj.d);
+    expect(newObj.e).to.not.equal(newObj.e); // test for NaN being copied over
+    // > NaN !== NaN
+    //true
+    expect(newObj.f).to.equal(myObj.f);
+  });
+
 });
