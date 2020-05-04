@@ -25,20 +25,24 @@ describe("deepCopy", () => {
     const newObj = deepCopy(myObj);
     expect(newObj.a).to.deep.equal(myObj.a);
   });
-  it("can copy an object that has undefined, NaN, Infinity, and functions as values", () => {
+  it("can copy an object that has undefined, NaN, Infinity as values", () => {
     const myObj = {
       a: [1],
-      b: NaN,
-      c: function() {
-        return "Hello!";
-      },
+      b: new Date(),
+      c: undefined,
       d: Infinity,
+      e: NaN,
+      f: false,
       }
     const newObj = deepCopy(myObj);
     expect(newObj.a).to.deep.equal(myObj.a);
-    expect(newObj.b).to.equal(myObj.b); //  AssertionError: expected null to equal NaN
+    expect(newObj.b).to.deep.equal(myObj.b);
     expect(newObj.c).to.equal(myObj.c);
     expect(newObj.d).to.equal(myObj.d);
+    expect(newObj.e).to.not.equal(newObj.e); // test for NaN being copied over
+    // > NaN !== NaN
+    //true
+    expect(newObj.f).to.equal(myObj.f);
   });
 
 });
