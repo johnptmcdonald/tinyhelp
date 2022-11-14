@@ -52,7 +52,7 @@
     "rimraf": "3.0.2",
     "semantic-release": "^17.0.6",
     "webpack": "4.42.1",
-    "webpack-cli": "3.3.11"
+    "webpack-cli": "3.3.12"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
