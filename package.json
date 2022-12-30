@@ -47,7 +47,7 @@
     "istanbul": "0.4.5",
     "jsdoc": "3.6.4",
     "json-loader": "0.5.7",
-    "mocha": "7.1.1",
+    "mocha": "10.2.0",
     "nyc": "15.0.1",
     "rimraf": "3.0.2",
     "semantic-release": "^17.0.6",
